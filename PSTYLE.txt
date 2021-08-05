@@ -1,0 +1,50 @@
+[ 
+    { 
+    "id":"1",
+    "name":"電流", 
+    "ename":"Waving", 
+    "pic":"" 
+    }, 
+    { 
+    "id":"2",
+    "name":"機器人", 
+    "ename":"Robot", 
+    "pic":"" 
+    }, 
+    { 
+    "id":"3",
+    "name":"埃及手", 
+    "ename":"Tutting/King Tut", 
+    "pic":"" 
+    }, 
+    { 
+    "id":"4",
+    "name":"震點", 
+    "ename":"Pop", 
+    "pic":"" 
+    }, 
+    { 
+    "id":"5",
+    "name":"魁儡", 
+    "ename":"Puppet", 
+    "pic":"" 
+    },
+    { 
+    "id":"6",
+    "name":"Boogaloo", 
+    "ename":"Boogaloo", 
+    "pic":"" 
+    },
+    { 
+    "id":"7",
+    "name":"眼鏡蛇", 
+    "ename":"Cobra", 
+    "pic":"" 
+    },
+    { 
+    "id":"8",
+    "name":"慢動作", 
+    "ename":"Slow motion", 
+    "pic":"" 
+    }
+] 

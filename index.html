@@ -8,55 +8,46 @@
 
 <body>
     <div class="w3-container ">
-        <div class="w3-container w3-center w3-dark-grey">
-            <h1>風格練習器</h1>
+        <div class="w3-container w3-center w3-dark-grey w3-padding-16  ">
+            <h1 id="HH1">風格練習器</h1>
         </div>
-        
-        <div class="w3-container">
-            <p><button id="BTN" class="w3-button w3-black w3-round-xxlarge" >產生</button></p>
-            <p><button id="BTN2" class="w3-button w3-black w3-round-xxlarge" >產生2</button></p>
-            <p id="disp"></p>
+
+        <div id="disp" class="w3-card w3-container  w3-center w3-padding-64 ">
+            <h3>請點選按鈕產生風格</h3>
         </div>
+
+
+        <div class=" w3-bar w3-center  w3-padding-16">
+            <button id="BTN" class="w3-button w3-black w3-round-xxlarge" >產生風格</button>
+            <button id="BTN2" class="w3-button w3-black w3-round-xxlarge" >重新產生</button>
+        </div>
+
         <footer class="w3-container  w3-center  w3-light-grey">
-            <h5>Design by G_MI  版本：1.0</h5>
+            <p>Design by G_MI  版本：1.0</p>
         </footer>
     </div> 
 <script>
-	/*var Ajax 
-    {
-        $.getJSON ("./userinfo.txt", function (data)
-        {
-            $.each (data, function (i, item)
-            {
-                $ ("#disp").append ("<h3>" + item.name + "</h3>");
-                $ ("#disp").append ("<p>" + item.sex + "</p>");
-				$ ("#disp").append ("<p>" + item.email + "</p>");
-            });
-        });
-    }*/
-
-    
+ 
     $(document).ready(function(){
-        var AA;
-        $("#BTN").click(function()
+        $("#BTN").click(function() //讀取JSON
         {
-            $.getJSON ("./userinfo.txt", function (data)
+            $.getJSON ("./PSTYLE.txt", function (data)
             {
-                var index = 1
-                console.log("length" ,data.length)
-                console.log(data[index])
-
-                AA = data[index]
-                console.log("AA：",AA)
-                $ ("#disp").append ("<h3>" + data[index].name + "</h3>");
-                $ ("#disp").append ("<p>" + data[index].sex + "</p>");
-                $ ("#disp").append ("<p>" + data[index].email + "</p>");
+                $ ("#disp").empty(); //清空
+                var index = Math.floor(Math.random() * data.length);
+                //console.log("length" ,data.length)
+                //console.log(data[index])
+                $ ("#disp").append ("<h3>" + data[index].name + "</h3>")
+                $ ("#disp").append ("<p>" + data[index].ename + "</p>");
             });
         });
 
         $("#BTN2").click(function()
         {
-            $ ("#disp").empty(); 
+            //$ ("#disp").empty(); //清空
+                var div = $("#KKK");  
+                div.animate({left: '100px'}, "slow");
+            
         });
     });
     
