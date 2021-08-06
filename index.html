@@ -1,37 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>POPPING STYLE</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./js/jquery-3.6.0.min.js"></script>
-<link rel="stylesheet"  href="./css/w3.css">
+    <title>POPPING STYLE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .control {
+            margin-right: 800px;
+        }
+    </style>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet"  href="./css/w3.css">
 </head>
 
 <body>
-    <div class="w3-row">
-    <div class="w3-container ">
-        <div class="w3-container w3-center w3-dark-grey w3-padding-16  ">
-            <h1 id="HH1">風格練習器</h1>
-        </div>
+    <div class="w3-row" style="max-width:2000px;margin-top:46px">
+        <div class="w3-cont ainer ">
+            <div class="w3-container w3-center w3-dark-grey w3-padding-16  ">
+                <h1 id="HH1">風格練習器</h1>
+            </div>
+            <div class=" w3-center w3-padding-16  ">
+                <button id="BTN" class="w3-button w3-black w3-round-xxlarge" >產生風格</button>
+                <button id="BTN3" class="w3-button w3-black w3-round-xxlarge" >開始練習</button>
+                <button id="BTN2" class="w3-button w3-black w3-round-xxlarge" >重新產生</button>
+            </div>
+            <!--Progress Bar-->
+            <div class="w3-light-grey w3-xlarge">
+                <div id="myBar" class="w3-container w3-blue-grey w3-center" style="width:0%">0%</div>
+            </div>     
 
-        <div id="disp" class="w3-card w3-container  w3-center w3-padding-64 ">
-            <h3>請點選按鈕產生風格</h3>
-        </div>
-
-
-        <div class=" w3-bar w3-center  w3-padding-16">
-            <button id="BTN" class="w3-button w3-black w3-round-xxlarge" >產生風格</button>
-            <button id="BTN2" class="w3-button w3-black w3-round-xxlarge" >重新產生</button>
-        </div>
-
-        <footer class="w3-container  w3-center  w3-light-grey">
-            <p>Design by G_MI  版本：1.0</p>
-        </footer>
-    </div> 
+            <div id="disp" class="w3-card w3-container  w3-center w3-padding-64 ">
+                <h1>請點選按鈕產生風格</h1>
+            </div>
+            <i class='fas fa-glasses'></i>
+            <footer class="w3-container   w3-cell-bottom w3-center  w3-light-grey">
+                <p>Design by G_MI  版本：1.2</p>
+            </footer>
+        </div> 
     </div> 
 <script>
  
     $(document).ready(function(){
+        $("#myBar").hide();
+        $("#BTN3").attr("disabled", true);
+
         $("#BTN").click(function() //讀取JSON
         {
             $.getJSON ("./PSTYLE.txt", function (data)
@@ -40,20 +51,39 @@
                 var index = Math.floor(Math.random() * data.length);
                 //console.log("length" ,data.length)
                 //console.log(data[index])
-                $ ("#disp").append ("<h3>" + data[index].name + "</h3>")
+                $ ("#disp").append ("<h1>" + data[index].name + "</h1>")
                 $ ("#disp").append ("<p>" + data[index].ename + "</p>");
+                $("#myBar").show();
+                $("#BTN3").attr("disabled", false);
             });
         });
 
         $("#BTN2").click(function()
         {
-            //$ ("#disp").empty(); //清空
-                var div = $("#KKK");  
-                div.animate({left: '100px'}, "slow");
-            
+            $ ("#disp").empty(); //清空
+            $ ("#disp").append ("<h1> 請點選按鈕產生風格 </h1>")
+            $("#myBar").css({"width":"0%"});
+            $("#myBar").html("0%");
+            $("#BTN3").attr("disabled", true);
+        });
+        //計時用
+        $("#BTN3").click(function()
+        {
+            var width = 0;
+            var id = setInterval(frame, 100);
+            $("#BTN3").attr("disabled", true);
+            function frame(){
+                if (width >= 100) {
+                clearInterval(id);
+                $("#BTN3").attr("disabled", false);
+                } else {
+                width++; 
+                $("#myBar").css({"width":width+"%"});
+                $("#myBar").html(width * 1  + '%');
+                }
+            }           
         });
     });
-    
 </script>
 
 </body>

@@ -1,50 +1,162 @@
 [ 
     { 
-    "id":"1",
     "name":"電流", 
     "ename":"Waving", 
     "pic":"" 
     }, 
     { 
-    "id":"2",
-    "name":"機器人", 
-    "ename":"Robot", 
+    "name":"電流(手)", 
+    "ename":"Waving", 
     "pic":"" 
     }, 
     { 
-    "id":"3",
+    "name":"電流(胸)", 
+    "ename":"Waving", 
+    "pic":"" 
+    }, 
+    { 
+    "name":"電流(臀)", 
+    "ename":"Waving", 
+    "pic":"" 
+    }, 
+    { 
+    "name":"電流(腳)", 
+    "ename":"Waving", 
+    "pic":"" 
+    }, 
+    { 
     "name":"埃及手", 
     "ename":"Tutting/King Tut", 
     "pic":"" 
-    }, 
+    },
     { 
-    "id":"4",
-    "name":"震點", 
-    "ename":"Pop", 
+    "name":"手指舞", 
+    "ename":"Finger Tut", 
     "pic":"" 
     }, 
     { 
-    "id":"5",
+    "name":"震點", 
+    "ename":"Pop/Hit", 
+    "pic":"" 
+    }, 
+    { 
+    "name":"Ticking", 
+    "ename":"Ticking", 
+    "pic":"" 
+    }, 
+    { 
+    "name":"Strobing", 
+    "ename":"Strobing", 
+    "pic":"" 
+    }, 
+    { 
     "name":"魁儡", 
     "ename":"Puppet", 
     "pic":"" 
     },
     { 
-    "id":"6",
     "name":"Boogaloo", 
     "ename":"Boogaloo", 
     "pic":"" 
     },
     { 
-    "id":"7",
+    "name":"Roll", 
+    "ename":"Roll", 
+    "pic":"" 
+    },
+    { 
     "name":"眼鏡蛇", 
     "ename":"Cobra", 
     "pic":"" 
     },
     { 
-    "id":"8",
+    "name":"蛇", 
+    "ename":"Sanking", 
+    "pic":"" 
+    },
+    { 
     "name":"慢動作", 
     "ename":"Slow motion", 
+    "pic":"" 
+    },
+    { 
+    "name":"慢動作(很慢)", 
+    "ename":"Slow motion #2", 
+    "pic":"" 
+    },
+    { 
+    "name":"慢動作(超慢)", 
+    "ename":"Slow motion #3", 
+    "pic":"" 
+    },
+    { 
+    "name":"Old Man", 
+    "ename":"Old Man", 
+    "pic":"" 
+    },
+    { 
+    "name":"Walk Out", 
+    "ename":"Walk Out", 
+    "pic":"" 
+    },
+    { 
+    "name":"玩具人", 
+    "ename":"Toyman", 
+    "pic":"" 
+    },
+    { 
+    "name":"稻草人", 
+    "ename":"Scarecrow", 
+    "pic":"" 
+    },
+    { 
+    "name":"機器人", 
+    "ename":"Robot", 
+    "pic":"" 
+    }, 
+    { 
+    "name":"假人", 
+    "ename":"Mannequin", 
+    "pic":"" 
+    }, 
+    { 
+    "name":"機械化-稻草人", 
+    "ename":"Robtic Scarecrow", 
+    "pic":"" 
+    },
+    { 
+    "name":"機械化-電流", 
+    "ename":"Robtic Waving", 
+    "pic":"" 
+    },
+    { 
+    "name":"機械化-眼鏡蛇", 
+    "ename":"Robtic Cobra", 
+    "pic":"" 
+    },
+    { 
+    "name":"機械化-魁儡", 
+    "ename":"Robtic Puppet", 
+    "pic":"" 
+    },
+    { 
+    "name":"機械化-蛇", 
+    "ename":"Robtic Sanking", 
+    "pic":"" 
+    },
+    {  
+    "name":"機械化-魁儡", 
+    "ename":"Robtic Puppet", 
+    "pic":"" 
+    },
+    {  
+    "name":"重力", 
+    "ename":"Gravity", 
+    "pic":"" 
+    },
+    {  
+    "name":"無重力", 
+    "ename":"No Gravity", 
     "pic":"" 
     }
 ] 
